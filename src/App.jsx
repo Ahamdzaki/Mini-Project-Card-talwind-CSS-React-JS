@@ -1,5 +1,6 @@
 import Card from "./Components/Card";
-
+import Email from "./Components/Email";
+import Product from "./Components/Product";
 const data = [
   {
     title: "Basic",
@@ -16,7 +17,7 @@ const data = [
     btnColor: "bg-violet-800",
   },
   {
-    title: "Basic",
+    title: "Premium",
     bundle: "2TB",
     price: "12.99/Month",
     bgColor: "bg-slate-700",
@@ -25,29 +26,37 @@ const data = [
 ];
 export default function App() {
   return (
-    <div className="flex items-center justify-center bg-slate-800 min-h-screen">
-      <div className="flex flex-col space-y-6 my-6 md:flex-row md:space-y-0 md:space-x-12">
-        <Card
-          title={data[0].title}
-          bundle={data[0].bundle}
-          price={data[0].price}
-          bgColor={data[0].bgColor}
-          btnColor={data[0].btnColor}
-        />
-        <Card
-          title={data[1].title}
-          bundle={data[1].bundle}
-          price={data[1].price}
-          bgColor={data[1].bgColor}
-          btnColor={data[1].btnColor}
-        />
-        <Card
-          title={data[2].title}
-          bundle={data[2].bundle}
-          price={data[2].price}
-          bgColor={data[2].bgColor}
-          btnColor={data[2].btnColor}
-        />
+    <div>
+      <div className="flex items-center justify-center bg-zinc-700 min-h-screen">
+        <Email />
+      </div>
+      <div className="flex items-center justify-center bg-slate-800 min-h-screen">
+        <div className="flex flex-col space-y-6 my-6 md:flex-row md:space-y-0 md:space-x-12">
+          <Card
+            title={data[0].title}
+            bundle={data[0].bundle}
+            price={data[0].price}
+            bgColor={data[0].bgColor}
+            btnColor={data[0].btnColor}
+          />
+          <Card
+            title={data[1].title}
+            bundle={data[1].bundle}
+            price={data[1].price}
+            bgColor={data[1].bgColor}
+            btnColor={data[1].btnColor}
+          />
+          <Card
+            title={data[2].title}
+            bundle={data[2].bundle}
+            price={data[2].price}
+            bgColor={data[2].bgColor}
+            btnColor={data[2].btnColor}
+          />
+        </div>
+      </div>
+      <div className="flex items-center justify-center min-h-screen bg-slate-100">
+        <Product />
       </div>
     </div>
   );

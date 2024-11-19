@@ -12,7 +12,7 @@ export default function Card(props) {
         <div className="flex justify-center">
           <a
             href=""
-            className={`px-5 py-3 mt-5 border ${btnColor} border-violet-700 rounded-lg hover:bg-violet-700 duration-200`}
+            className={`px-5 py-3 mt-10 border ${btnColor} border-violet-700 rounded-lg hover:bg-violet-700 duration-200`}
           >
             Purchase
           </a>
